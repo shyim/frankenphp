@@ -9,11 +9,6 @@ package frankenphp
 //go:generate git clone --branch=fix/SA_ONSTACK --depth=1 git@github.com:dunglas/C-Thread-Pool.git
 //go:generate rm -Rf C-Thread-Pool/.git C-Thread-Pool/.circleci C-Thread-Pool/docs C-Thread-Pool/tests
 
-// #cgo CFLAGS: -Wall -Werror
-// #cgo CFLAGS: -I/usr/local/include/php -I/usr/local/include/php/Zend -I/usr/local/include/php/TSRM -I/usr/local/include/php/main
-// #cgo linux CFLAGS: -D_GNU_SOURCE
-// #cgo LDFLAGS: -L/usr/local/lib -L/opt/homebrew/opt/libiconv/lib -L/usr/lib -lphp -lxml2 -lresolv -lsqlite3 -ldl -lm -lutil
-// #cgo darwin LDFLAGS: -liconv
 // #include <stdlib.h>
 // #include <stdint.h>
 // #include <php_variables.h>
